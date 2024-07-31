@@ -149,7 +149,7 @@ hr {
 }
 
 #system p {
-    text-align: center;
+    text-align: justify;
     font-size: 1.2rem;
 }
 
@@ -720,6 +720,7 @@ h1 {
 }
 
 #download .number-icon p {
+    text-align: justify;
     color: #737373;
 }
 
