@@ -522,120 +522,213 @@
     </div>
 </section>
 
-    <!-- footer-start -->
-    <style>
-    .footer_last_menu {
-        display: flex;
-        list-style: none;
-        gap: 10px;
-        width: 100%;
-        margin-bottom: 0;
-    }
-
-    .footer_last_menu a {
-        color: white;
-    }
-
-    .footer_last_menu li {
-        padding-right: 12px;
-        border-right: 1px solid white;
-    }
-
-    .bxl-apple, .bxl-android, .bxl-twitter, .bxl-facebook, .bxl-instagram {
-        font-size: 28px;
-        color: white;
-    }
-
-    .social-links-footer {
-        display: flex;
-    }
-
-    .social-links-footer a {
-        padding: 10px;
-    }
-
-    .social-links-footer a:hover {
-        padding: 10px;
-        border-radius: 50%;
-        background: white;
-    }
-
-    .social-links-footer a:hover .bxl-apple,.social-links-footer a:hover .bxl-android,.social-links-footer a:hover .bxl-twitter,.social-links-footer a:hover .bxl-facebook,.social-links-footer a:hover .bxl-instagram {
-        font-size: 28px;
-        color: #061C3D;
-    }
-</style>
-<footer id="footer">
-    <div class="footer-top">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 footer-links">
-                    <h2><strong>Adxenia</strong></h2>
-                    <br><br>
-                    <p><big>Adxenia Pvt. Ltd. is a full-service advertising and innovative digital marketing agency with offices worldwide. Our cost-effective services allow business professionals to unlock the full potential of their company and maximize their growth strategy</big></p>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 footer-links">
-                    <h4>Our Products</h4>
-                    <ul>
-                        <li><a href="bulk-sms-service.html">Bulk SMS</a></li>
-                        <li><a href="international-sms-service-provider.html">International SMS</a></li>
-                        <li><a href="voice-call.html">Voice Calls</a></li>
-                        <li><a href="ivr-services.html">IVR Service</a></li>
-                        <li><a href="website-development.html">Web Development</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 footer-links">
-                    <h4>Discover</h4>
-                    <ul>
-                        <li><a href="about.html">About Us</a></li>
-                        <li><a href="contact-us.html">Contact Us</a></li>
-                        <li><a href="#">Blogs</a></li>
-                        <li><a href="pricing/india.html">Pricing</a></li>
-                        <li><a href="faq.html">FAQ</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6">
-                    <div class="footer-info">
-                        <div>
-                            <div class="logo">
-                                <h4>GET THE APP </h4>
-                                <div class="social-links-footer mt-3">
-                                    <a target="_blank" href="#" title="Google App Store" class="youtube" ><i class="bx bxl-android"></i></a>
-                                    <a target="_blank" href="#" title="Apple Store" class="youtube"><i class="bx bxl-apple"></i></a>
-                                </div>
-                            </div>
-                            <div>
-                                <h4 class="p-0 m-0 mt-2">Social media </h4>
-                                <div class="social-links-footer mt-3">
-                                    <a target="_blank"  href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                                    <a target="_blank"  href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                                    <a target="_blank"  href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-
+     <!-- footer-start -->
+     <style>
+        /* Flex container settings */
+        .row.d-flex {
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping if images overflow */
+            justify-content: center; /* Center aligns items horizontally */
+            align-items: center; /* Center aligns items vertically */
+        }
+        
+        /* Ensure images fit within their columns */
+        .col-lg-2 {
+            flex: 0 0 auto; /* Prevent columns from shrinking */
+            max-width: 14.28%; /* 100% / 7 images = ~14.28% per column */
+            padding: 5px; /* Optional: Space around images */
+        }
+        
+        /* Optional: Set maximum size for images */
+        .img-fluid {
+            max-width: 70%;
+            height: auto; /* Maintains aspect ratio */
+        }
+        
+        
+        
+        
+        
+            .footer_last_menu {
+                display: flex;
+                list-style: none;
+                gap: 10px;
+                width: 100%;
+                margin-bottom: 0;
+            }
+        
+            .footer_last_menu a {
+                color: white;
+            }
+        
+            .footer_last_menu li {
+                padding-right: 12px;
+                border-right: 1px solid white;
+            }
+        
+            .bxl-apple, .bxl-android, .bxl-twitter, .bxl-facebook, .bxl-instagram {
+                font-size: 28px;
+                color: white;
+            }
+        
+            .social-links-footer {
+                /* justify-content: center; */
+                display: flex;
+            }
+        
+            .social-links-footer a {
+                padding: 10px;
+            }
+        
+            .social-links-footer a:hover {
+                padding: 10px;
+                border-radius: 50%;
+                background: white;
+            }
+        
+            .social-links-footer a:hover .bxl-apple,.social-links-footer a:hover .bxl-android,.social-links-footer a:hover .bxl-twitter,.social-links-footer a:hover .bxl-facebook,.social-links-footer a:hover .bxl-instagram {
+                font-size: 28px;
+                color: #061C3D;
+            }
+        
+            /* Ensure that the footer container uses flexbox for layout */
+        .footer-top .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between; /* Distribute space evenly */
+        }
+        
+        /* Make sure each column has an equal width */
+        .footer-top .col-lg-3, 
+        .footer-top .col-md-3, 
+        .footer-top .col-sm-6 {
+            flex: 1; /* Allow columns to grow equally */
+            max-width: 100%; /* Ensure they do not exceed container width */
+            padding: 0 15px; /* Add some padding for spacing */
+        }
+        
+        /* Ensure each section within columns is consistently styled */
+        .footer-links h2, 
+        .footer-links h4 {
+            margin-top: 1px;
+        }
+        /* Apply styles to paragraphs in the footer links */
+        .footer-links p {
+            text-align: justify; /* Justify text for alignment */
+            margin: 0; /* Remove default margins */
+            line-height: 1.6; /* Line height for readability */
+            word-spacing: normal; /* Reset abnormal word spacing */
+            letter-spacing: normal; /* Reset abnormal letter spacing */
+            word-break: normal; /* Prevent breaking words unnecessarily */
+        }
+        
+        
+        .footer-info img {
+            max-width: 100%; /* Ensure images are responsive */
+        }
+        
+        /* Add spacing between Adxenia column and Our Products column */
+        .adxenia-column {
+            margin-right: 100px; /* Adjust the value to your needs */
+        }
+        
+        /* Optional: Ensure there's no additional margin on the last column */
+        .our-products-column {
+            margin-left: 0;
+        }
+        
+        /* Media Query for Smaller Screens */
+        @media (max-width: 991px) {
+            .adxenia-column {
+                margin-right: 0;
+                margin-bottom: 20px; /* Adds spacing between rows on smaller screens */
+            }
+        }
+        /* Adjust the margin-top or padding-top for upward movement */
+        .adxenia-column {
+            margin-top: -10px; /* Adjust this value as needed */
+            /* Alternatively, use padding-top if you prefer */
+            /* padding-top: 10px; */
+        }
+        
+        /* Optional: If you want to ensure alignment with other columns */
+        .footer-links {
+            margin-bottom: 20px; /* Adjust this to ensure spacing with other columns */
+        }
+        </style>
+        
+        <footer id="footer">
+            <div class="footer-top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-3 col-md-3 col-sm-6 footer-links adxenia-column">
+                            <h2><strong>Adxenia</strong></h2>
+                            <p style="text-decoration: none; color: #6A778B;">
+                                Adxenia is a full-service advertising and innovative digital marketing agency. Our cost-effective services allow business professionals to unlock the full potential of their company and maximize their growth strategy.
+                            </p>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 footer-links our-products-column">
+                            <h4>Our Products</h4>
+                            <ul>
+                                <li><a href="bulk-sms-service.html">Bulk SMS</a></li>
+                                <li><a href="international-sms-service-provider.html">International SMS</a></li>
+                                <li><a href="voice-call.html">Voice Calls</a></li>
+                                <li><a href="ivr-services.html">IVR Service</a></li>
+                                <li><a href="website-development.html">Web Development</a></li>
+                            </ul>
+                        </div>
+                        
+                        <div class="col-lg-3 col-md-3 col-sm-6 footer-links">
+                            <h4>Discover</h4>
+                            <ul>
+                                <li><a href="about.html">About Us</a></li>
+                                <li><a href="contact-us.html">Contact Us</a></li>
+                                <li><a href="#">Blogs</a></li>
+                                <li><a href="pricing/india.html">Pricing</a></li>
+                                <li><a href="faq.html">FAQ</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 footer-links">
+                            <h4>Company</h4>
+                            <ul>
+                                <li><a href="privacy-policy.html">Privacy Policy</a></li>
+                                <li><a href="termsConditions.html">Terms & Conditions</a></li>
+                                <li><a href="refundCancellation.html">Refund & Cancellation</a></li>
+                                <li><a href="disclaimer.html">Disclaimer</a></li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6">
+                            <div class="footer-info">
+                                <div>
+                                    <div class="logo">
+                                        <h4>GET THE APP</h4>
+                                        <div class="social-links-footer mt-3">
+                                            <a target="_blank" href="#" title="Google App Store" class="youtube"><i class="bx bxl-android"></i></a>
+                                            <a target="_blank" href="#" title="Apple Store" class="youtube"><i class="bx bxl-apple"></i></a>
+                                        </div>
+                                    </div>
+                                   
+                                    <div>
+                                        <h4 class="p-0 m-0 mt-2">Social media</h4>
+                                        <div class="social-links-footer mt-3">
+                                            <a target="_blank" href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
+                                            <a target="_blank" href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+                                            <a target="_blank" href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-
-        <div class="container">
-
-            <div class="row mt-3">
-                <div class="col">
-                    <p class="m-0">Copyright &copy;2024 <a class='text-white text-start' target="_blank" href="index.html"><strong><span>Adxenia Platform Private Limited</span></strong></a>.
-                        All Rights Reserved | 
-                        <a class='text-white text-start' href="privacy-policy.html"><strong><span>Privacy Policy</span></strong></a> |
-                        <a class='text-white text-start' href="termsConditions.html"><strong><span>Terms & Conditions</span></strong></a> |
-                        <a class='text-white text-start' href="refundCancellation.html"><strong><span>Refund & Cancellation</span></strong></a> |
-                        <a class='text-white text-start' href="disclaimer.html"><strong><span>Disclaimer</span></strong></a>
-                    </p>
+        
+                <div class="copyright">
+                    <p>Copyright &copy;2024 Adxenia Platforms Pvt Ltd. All Rights Reserved</p>
                 </div>
             </div>
-        </div>
-
-</footer>
-    <!-- footer-end -->
+        </footer>
+        
+            <!-- footer-end -->
 
     <!-- Scripts -->
     <script src="public/assets/js/core/libraries/jquery.min.js"></script>
