@@ -1425,10 +1425,6 @@ h1 {
     background: #0751be;
 }
 
-#hero .animated {
-    animation: up-down 2s ease-in-out infinite alternate-reverse both;
-}
-
 #hero {
     width: 100%;
     height: 100vh;
